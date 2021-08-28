@@ -209,3 +209,11 @@ function solution16(s) {
 console.log(solution16('ksekkset'))
 
 // 17. 중복 단어 제거
+function solution17(s) {
+  let answer;
+  console.log(str17.indexOf('time'))
+  return answer = s.filter((v,i)=> s.indexOf(v)===i);
+}
+
+let str17=['good', 'time', 'good', 'time', 'student']
+console.log(solution17(str17))
