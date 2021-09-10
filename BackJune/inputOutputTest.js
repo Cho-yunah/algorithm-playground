@@ -1,33 +1,33 @@
+const fs = require('fs')
 
-const fs=require('fs')
-let input = fs.readFileSync('./input.txt').toString().split('\n')
+// 한줄 입력
+let input = fs.readFileSync('./input.txt').toString().split(' ')
+// console.log(input)
 
-const inputC = +input[0]
-const inputTestCase = []
+let numArr = input.map((item) => +item)
+console.log(numArr)
 
-for(let i = 1; i <= inputC; ++i) {
-  const arr = input[i].split(' ').map(item=> +item)
-  // let newArr = [];
-  // for (let i = 0; i <arr.length; ++i){
-  //   newArr.push (+arr[i])
-  // }
-
-  console.log(arr)
-
-  // const testCase = {
-  //   N: arr[0],
-  //   arr: newArr,
-  // }
-
-  // console.log('testCase', testCase)
-  // inputTestCase.push(testCase)
-  break;
+for (let i = 0; i < numArr.length; i++) {
+  let answer = 0
+  answer += numArr[i]
+  console.log(answer)
 }
-console.log('inputTestCase', inputTestCase)
 
-// function solution (C, testCase) {
-//   console.log(C)
-//   console.log(testCase)
+// 여러줄로 입력받을 때
+// const input = fs.readFileSync('./input.txt').toString().trim().split('\n')
+
+// let count = +input[0]
+// let numbers = []
+
+// for (let i = 1; i < input.length; i++) {
+//   if (input[i] !== '') {
+//     push(input[i].split(' '))
+//   }
 // }
 
-// solution(inputC,inputTestCase)
+// for (let i = 0; i < numbers.length; i++) {
+//   let num1 = Number(numbers[i][0])
+//   let num2 = Number(numbers[i][1])
+
+//   console.log(num1 + num2)
+// }
